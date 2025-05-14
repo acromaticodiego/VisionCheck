@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Imagen del símbolo de capiro utilizada como icono en la página -->
+  <link rel="shortcut icon" type="image/png" href="./assets/Símbolo_Capiro_2.png">
+  <!-- Link de enlace a los estilos CSS del resumen del día -->
+  <link rel="stylesheet" href="resumendia.css">
+  <title>Mesa de calidad</title>
+</head>
+<body>
+
+  <!-- Imagen del logo de capiro -->
+  <img src="./assets/Logo_Capiro_4.jpg" alt="logo" class="logo">
+
+  <!-- Nombre del proyecto -->
+  <div class="text">
+    <h1>Cutting vision</h1>
+  </div>
+
+  <!-- Enlace para volver a la interfaz principal -->
+  <div class="inicio">
+    <a href="ingreso.html" class="inicio">Volver al inicio</a>
+  </div>
+
+  <!-- Símbolo de capiro como icono para volver al inicio -->
+  <img src="./assets/Símbolo_Capiro_2.png" alt="icono inicio" class="icono">
+
+  <!-- Contenedor del resumen -->
+  <div class="container">
+
+    <!-- Primera columna -->
+    <div class="columna">
+      <div class="fila">
+        <!-- Título -->
+        <div class="resumen">Cosechador</div>
+        <!-- Valor que se actualizará -->
+        <div class="valor-cosechador">0</div>
+      </div>
+      <div class="fila">
+        <div class="resumen">DMD</div>
+        <div class="valor-dmd">0</div>
+      </div>
+      <div class="fila">
+        <div class="resumen">Esquejes largos</div>
+        <div class="valor-esqLargoD">0</div>
+      </div>
+      <div class="fila">
+        <div class="resumen">Hoja en base</div>
+        <div class="valor-hbD">0</div>
+      </div>
+      <div class="fila">
+        <div class="resumen">Esquejes cortos</div>
+        <div class="valor-esqCortoD">0</div>
+      </div>
+    </div>
+    
+    <!-- Segunda columna -->
+    <div class="columna">
+      <div class="fila">
+        <div class="resumen">Conteo de esquejes</div>
+        <div class="valor-contEsqD">0</div>
+      </div>
+      <div class="fila">
+        <div class="resumen">Promedio del tallo</div>
+        <div class="valor-promTalloD">0</div>
+      </div>
+      <div class="fila">
+        <div class="resumen">Promedio área foliar</div>
+        <div class="prom-area">0</div>
+      </div>
+      <div class="fila">
+        <div class="resumen">Promedio longitud</div>
+        <div class="prom-long">0</div>
+      </div>
+      <div class="fila">
+        <div class="resumen">Promedio diámetro</div>
+        <div class="prom-diametro">0</div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- Script para recuperar y mostrar los datos guardados -->
+  <!-- Script para recuperar y mostrar los datos guardados -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const datosGuardados = sessionStorage.getItem("datosGuardados");
+      if (datosGuardados) {
+        const datos = JSON.parse(datosGuardados);
+        // Mapeo de valores según la lista:
+        
+        // COSECHADOR -> Contenedor: .valor-cosechador
+        if (document.querySelector('.valor-cosechador')) {
+          document.querySelector('.valor-cosechador').textContent = datos.cosechador || "N/A";
+        }
+        // DMD -> Contenedor: .valor-dmd
+        if (document.querySelector('.valor-dmd')) {
+          document.querySelector('.valor-dmd').textContent = datos.dmd || "N/A";
+        }
+        // ESQUEJES LARGOS -> Contenedor: .valor-esqLargoD
+        if (document.querySelector('.valor-esqLargoD')) {
+          document.querySelector('.valor-esqLargoD').textContent = datos.esquejesLargos || "N/A";
+        }
+        // HOJA EN BASE -> Contenedor: .valor-hbD
+        if (document.querySelector('.valor-hbD')) {
+          document.querySelector('.valor-hbD').textContent = datos.hojaEnBase || "N/A";
+        }
+        // ESQUEJES CORTOS -> Contenedor: .valor-esqCortoD
+        if (document.querySelector('.valor-esqCortoD')) {
+          document.querySelector('.valor-esqCortoD').textContent = datos.esquejesCortos || "N/A";
+        }
+        // CONTEO DE ESQUEJES -> Contenedor: .valor-contEsqD
+        if (document.querySelector('.valor-contEsqD')) {
+          document.querySelector('.valor-contEsqD').textContent = datos.conteoEsquejes || "N/A";
+        }
+        // PROMEDIO DEL TALLO -> Contenedor: .valor-promTalloD
+        if (document.querySelector('.valor-promTalloD')) {
+          document.querySelector('.valor-promTalloD').textContent = datos.promedioTallo || "N/A";
+        }
+        // PROMEDIO AREA FOLIAR -> Contenedor: .prom-area
+        if (document.querySelector('.prom-area')) {
+          document.querySelector('.prom-area').textContent = datos.promedioAreaFoliar || "N/A";
+        }
+        // PROMEDIO LONGITUD -> Contenedor: .prom-long
+        if (document.querySelector('.prom-long')) {
+          document.querySelector('.prom-long').textContent = datos.promedioLongitud || "N/A";
+        }
+        // PROMEDIO DIAMETRO -> Contenedor: .prom-diametro
+        if (document.querySelector('.prom-diametro')) {
+          document.querySelector('.prom-diametro').textContent = datos.promedioDiametro || "N/A";
+        }
+        console.log("Datos recuperados en resumen:", datos);
+      } else {
+        console.log("No hay datos guardados en sessionStorage.");
+      }
+    });
+    </script>
+
+</body>
+</html>

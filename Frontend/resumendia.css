@@ -1,0 +1,128 @@
+/*Estilos generales*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    
+   
+  }
+  
+/*Estilos del cuerpo del html*/
+  body,html{
+    background-color: #e4e1dc;
+    font-family: century gothic;
+    font-weight: bold;
+    font-size: 20px;                      
+    overflow-x: hidden;  
+    overflow-y: hidden;
+  }
+
+/*Estilos de la margen para mantener los tamaños*/
+  .margin{
+    margin: 10px;
+  
+    
+    
+  }
+  
+/*Estilos del logo de capiro*/
+  .logo{
+    width: 30%;
+    height: 30%;
+  
+  }
+
+  /*Estilos del nombre del proyecto*/
+  .text{
+    font-size: 20px;
+    color: #E98300;
+    text-align: center;
+    transform: translateY(-110px);
+  }
+
+/*Estilos del texto de redireccionamiento al inicio*/
+  .inicio{
+    position: relative;
+    font-size: 30px;
+    left: 730px;
+    color: #496c60;
+    justify-content: space-between;
+   transform: translateY(-150px);
+  }
+  
+  a{
+    text-decoration: none;
+  }
+
+  .inicio:hover{
+    color: #E98300;
+  }
+  
+/*Estilos del icono de volver al inicio*/
+  .icono{
+    width:190px;
+    height: 150px;
+    position: relative;
+    left:1600px;
+    transform: translateY(-250px);
+  }
+
+/*Estilos del contenedor del resumen*/
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    border: 3px solid #496c60;
+    border-radius: 30px;
+    gap: 300px;
+    max-width: 1200px;
+    height: 390px;
+    margin: auto;
+    transform: translateY(-150px);
+}
+
+/*Estilos del contenedor de las columnas*/
+.columna {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    
+}
+
+/*Estilos del contenedor de los valores*/
+.fila {
+    display: flex;
+    align-items: center;
+}
+
+/*Estilos del titulo*/
+.resumen {
+    background-color: #4d6b5a;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    min-width: 250px;
+    text-align: left;
+    margin-top: 5%;
+}
+
+/*Estilos de los valores*/
+.valor-cosechador,
+.valor-contEsqD,
+.valor-dmd,
+.valor-promTalloD,
+.valor-esqLargoD,
+.prom-area,
+.valor-hbD,
+.prom-long,
+.valor-esqCortoD,
+.prom-diametro {
+    font-weight: bold;
+    color: black;
+    margin-left: 10px;
+}

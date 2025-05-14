@@ -1,0 +1,102 @@
+/*Estilos del cuerpo del html*/
+body {
+    margin:0 ;
+    font-family: Century gothic;
+    background-image: url(assets/img_iniciosesión.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-weight: bold;
+    overflow: hidden;
+    
+    
+}
+
+/*Estilos del simbolo*/
+.logo{
+    width: 20%;
+    height: 20%;
+    position: relative;
+    left: 760px;
+}
+
+/*Estilos del contenedor del formulario*/
+.login-container{
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding:20px;
+    border-radius: 40px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: translateY(-100px);
+    font-weight: bold;
+}   
+
+/*Estilos del texto del contenedor del formulrio*/
+.login-container h2{
+    margin-bottom: 20px;
+    color: #496C60;
+    font-size: 30px;
+}
+
+/*Estilos del campo de texto para el usuario y la contraseña*/
+.login-container label{
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #496C60;
+}
+
+/*Estilos del campo de texto para ingresar los datos requeridos*/
+.login-container input{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 3px solid #496C60;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+/*Estilos del campo de texto para la recuperación de la contraseña*/
+.olvidaste-contraseña{
+    font-size: 10px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #496C60;
+    text-decoration: none;
+}
+
+/*Estilos del boton ingresar*/
+.btn-ingresar{
+    background-color: #E98300;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: 2px solid #496C60;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.btn-ingresar:hover{
+    background-color: #496C60;
+}
+
+/*Estilos del boton de registro*/
+.registrate{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #496C60;
+    text-decoration: none;
+}
+
+
+

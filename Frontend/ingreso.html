@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Imagen del símbolo de Capiro utilizada como icono de la página -->
+  <link rel="shortcut icon" type="image/png" href="./assets/Símbolo_Capiro_2.png">
+
+  <!-- Link de los estilos CSS de la interfaz principal -->
+  <link rel="stylesheet" href="ingreso.css">
+
+  <title>Mesa de calidad</title>
+</head>
+<body>
+  
+  <!-- Link del JavaScript principal -->
+  <script src="script.js"></script>
+
+  <!-- Imagen del logo de Capiro -->
+  <img src="./assets/Logo_Capiro_4.jpg" alt="logo" class="logo">
+
+  <!-- Nombre del proyecto -->
+  <div class="text">
+    <h1>Cutting vision</h1>
+  </div>
+
+  <!-- Enlace para cerrar sesión -->
+  <div class="salir">
+    <a href="login.html" class="salir">Cerrar sesión</a>
+  </div>
+
+  <!-- Icono de salida -->
+  <img src="./assets/icons8-salida-24.png" alt="icono salida" class="icono">
+
+  <!-- Contenedor del video -->
+  <div class="izquierda">
+    <video id="videoElement" autoplay></video>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <!-- Contenedor central con datos e información -->
+  <div class="margin">
+
+    <!-- Contenedor de datos (cada "cuadro" muestra un dato) -->
+    <div class="medio">
+      <div class="cuadro">
+        <div class="titulo">Cosechador</div>
+        <div class="valor">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Variedad</div>
+        <div id="valor" class="valor1">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Conteo de esquejes</div>
+        <div class="contenedor-valores">
+          <div id="valor2" class="valor2">*</div>/
+          <div id="valor2" class="EsqXbol">*</div>
+        </div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Medida</div>
+        <div id="valor" class="valor3">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Promedio Longitud</div>
+        <div id="valor" class="valor4">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Promedio longitud mayor</div>
+        <div id="valor" class="valor5">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Promedio longitud menor</div>
+        <div id="valor" class="valor6">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Desviación estándar longitud</div>
+        <div id="valor" class="valor7">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Promedio diametro</div>
+        <div id="valor" class="valor8">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Promedio diametro mayor</div>
+        <div id="valor" class="valor9">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Promedio diametro menor</div>
+        <div id="valor" class="valor10">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Desviación estandar diametro</div>
+        <div id="valor" class="valor11">*</div>
+      </div>
+      <div class="cuadro openModal" data-endpoint="list_detected_images2">
+        <div class="titulo">Esquejes largos</div>
+        <div id="valor3" class="valor12">*</div>
+      </div>
+      <div class="cuadro openModal" data-endpoint="list_detected_images1">
+        <div class="titulo">Esquejes cortos</div>
+        <div id="valor2" class="valor13">*</div>
+      </div>
+      <div class="cuadro openModal" data-endpoint="list_detected_images">
+        <div class="titulo">Hoja en base</div>
+        <div id="valor" class="valor14">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Promedio área foliar</div>
+        <div id="valor" class="valor15">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Promedio área foliar mayor</div>
+        <div id="valor" class="valor16">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Promedio área foliar menor</div>
+        <div id="valor" class="valor17">*</div>
+      </div>
+      <div class="cuadro">
+        <div class="titulo">Desviación estandar area foliar</div>
+        <div id="valor" class="valor18">*</div>
+      </div>
+    </div>
+
+    <!-- Contenedor de botones -->
+    <div class="botones">
+      <button id="scan" class="btn">Escanear</button>
+      <button id="guardarBtn" class="btn">Guardar</button>
+      <button id="resumen" class="btn">
+        <a href="resumendia.html"><font color="white">Resumen</font></a>
+      </button>
+    </div>
+
+    <!-- Contenedor para las imágenes -->
+    <div class="abajo">
+      <div class="inferior">
+        <img id="imagen1" class="img" src="./assets/logo-img.jpg" alt="Imagen 1">
+        <img id="imagen2" class="img" src="./assets/logo-img.jpg" alt="Imagen 2">
+        <img id="imagen3" class="img" src="./assets/logo-img.jpg" alt="Imagen 3">
+        <img id="imagen4" class="img" src="./assets/logo-img.jpg" alt="Imagen 4">
+        <img id="imagen5" class="img" src="./assets/logo-img.jpg" alt="imagen 5">
+      </div>
+    </div>
+
+    <!-- Modal (sin cambios) -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <button class="close" id="closeModal">&times;</button>
+        <div class="carousel">
+          <button class="carousel-button left" id="prev"> &#8249;</button>
+          <div class="carousel-images" id="carouselImages">
+            <img id="imgmodal1" class="imgmodal" src="./assets/esqueje1.jpg" alt="Image 1">
+            <img id="imgmodal2" class="imgmodal" src="./assets/esqueje2.jpg" alt="Image 2">
+            <img id="imgmodal3" class="imgmodal" src="./assets/esqueje3.jpg" alt="Image 3">
+          </div>
+          <button class="carousel-button right" id="next">&#8250;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts para el modal -->
+    <script src="modal.js" defer></script>
+   
+  </div>
+
+
+</body>
+</html>
