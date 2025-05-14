@@ -1,0 +1,4 @@
+model_hoja_base_100EM.pt
+100EPOCHS_V2.onnx
+Stem_Segmentation_V7_Bin.pt
+Stem_detect_seg.pt
